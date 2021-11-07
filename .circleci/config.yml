@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: circleci/node:10
+      - image: circleci/node:16
     steps:
       - checkout
       - run:
@@ -13,7 +13,7 @@ jobs:
 
   publish:
     machine:
-      image: ubuntu-1604:201903-01
+      image: cimg/base:2021.04
     steps:
       - checkout
       - run:
@@ -37,7 +37,7 @@ jobs:
 
   publish-latest:
     machine:
-      image: ubuntu-1604:201903-01
+      image: cimg/base:2021.04
     steps:
       - checkout
       - run:

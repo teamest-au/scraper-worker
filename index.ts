@@ -2,7 +2,7 @@ import { AvailableScrapers, Scrape } from '@teamest/scrapers';
 import { Configuration, Target } from '@teamest/models/raw';
 import { ScrapedSeasonMessage } from '@teamest/models/messages';
 import { Rabbit, publishObservable } from '@danielemeryau/simple-rabbitmq';
-import Logger from '@danielemeryau/logger';
+import { BunyanLogger as Logger } from '@danielemeryau/logger';
 
 import readJsonFromStdin from './src/readJsonFromStdin';
 import createMessage from './src/createMessage';
